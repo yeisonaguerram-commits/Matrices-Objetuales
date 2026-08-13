@@ -4,7 +4,7 @@ public class Menu {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         boolean continuar = true;
-        Metodos m = new Metodos();
+        metodo m = new metodo();
         int n = 0;
         System.out.println("Ingrese el tamaño de la matriz");
         n = sc.nextInt();
@@ -15,7 +15,9 @@ public class Menu {
             System.out.println("2. Mostrar Matriz de enteros");
             System.out.println("3. Llenar Matriz Objetual");
             System.out.println("4. Mostrar Matriz Objetual");
-            System.out.println("5. Salir");
+            System.out.println("5. Mostrar Diagonal Matriz Objetual");
+            System.out.println("6. Mostrar Números Impares Matriz Objetual");
+            System.out.println("7. Salir");
             int opcion = sc.nextInt();
             switch (opcion) {
                 case 1:
@@ -31,6 +33,12 @@ public class Menu {
                     m.mostrarMatrizObjetual(MO);
                     break;
                 case 5:
+                    m.mostrarDiagonalMatrizObjetual(MO);
+                    break;
+                case 6:
+                    m.mostrarNumerosImparesMatrizObjetual(MO);
+                    break;
+                case 7:
                     System.out.println("Saliendo del programa...");
                     continuar = false;
                     break;
@@ -38,5 +46,6 @@ public class Menu {
                     System.out.println("Opción inválida");
             }
         }
+        sc.close();
     }
 }
