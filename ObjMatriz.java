@@ -16,5 +16,4 @@ public class ObjMatriz {
         this.dato = dato;
     }
 
-    
 }
